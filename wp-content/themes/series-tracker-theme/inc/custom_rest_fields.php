@@ -1,18 +1,10 @@
 <?php
 function custom_rest_fields() {
-
-// count tracked series
-$seriesPosts = new WP_Query(array(
-    'post_type' => 'series',
-    'posts_per_page' => -1,
-    'author' => get_current_user_id()
-));
-
+    
+// count tracked series of user
 register_rest_field('series', 'tracked_series', array(
     'get_callback' => function () {
-        global $seriesPosts;
-
-        return getTrackedSeries($seriesPosts);
+        return count_user_posts(get_current_user_id(), 'series');
     },
     'update_callback' => null,
     'schema' => null
