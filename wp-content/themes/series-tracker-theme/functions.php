@@ -45,8 +45,8 @@ function tracker_files() {
         wp_enqueue_script('main-tracker-js', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
     } else {
         wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.8c97d901916ad616a264.js'), NULL, '1.0', true);
-        wp_enqueue_script('main-university-js', get_theme_file_uri('/bundled-assets/scripts.fda25c5bf73c0108ceab.js'), NULL, '1.0', true);
-        wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.fda25c5bf73c0108ceab.css'));
+        wp_enqueue_script('main-university-js', get_theme_file_uri('/bundled-assets/scripts.27ad72884993804a44a1.js'), NULL, '1.0', true);
+        wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.27ad72884993804a44a1.css'));
     }
 
     // store creds to javascript var, for ajax rest api communication
@@ -111,7 +111,7 @@ function ourHeaderUrl() {
 add_action('login_enqueue_scripts', 'ourLoginCSS');
 
 function ourLoginCSS() {
-    wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.fda25c5bf73c0108ceab.css'));
+    wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.27ad72884993804a44a1.css'));
     wp_enqueue_style('custom-google-font', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
 }
 

@@ -27,7 +27,7 @@ class MySeries {
 		$(".series-main").on("click", ".episode-minus", this.episodeMinus.bind(this));
 
 		// search series
-		$("#search-series").on("input", this.searchSeries);
+		$("#search-series").on("input", this.search);
 	}
 
 	/******  DELETE SERIES  ******/
